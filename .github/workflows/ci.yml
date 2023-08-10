@@ -17,4 +17,4 @@ jobs:
         distribution: 'zulu'
         java-version: 17
     - name: Run tests
-      run: ./mvnw -f subproject/pom.xml test
+      run: sh ./mvnw -f subproject/pom.xml test
