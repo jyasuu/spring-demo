@@ -20,22 +20,3 @@ public class MyBean {
 
     @Value("${name}")
     public String name;
-
-    @Autowired
-    public MyBean(ApplicationArguments args, MyProperties myProperties, UserDao userDao) {
-        boolean debug = args.containsOption("debug");
-        List<String> files = args.getNonOptionArgs();
-        logger.info(name);
-        logger.info(myProperties.getList().toString());
-        logger.info(myProperties.getMap().toString());
-        logger.info(files.toString());
-        if (debug) {
-            logger.info(files.toString());
-        }
-        // if run with "--debug logfile.txt" prints ["logfile.txt"]
-    }
-
-    public void interactWithUserDao() {
-        // Implementation for interacting with the user DAO layer
-        // Add your implementation here
-    }
