@@ -10,6 +10,14 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 public class DemoApplication {
 
+    // Existing code...
+
+}
+
+@RestController
+@RequestMapping("/api")
+public class UserController {
+
     @GetMapping("/users")
     public String getUserData() {
         // Implementation for retrieving user data
@@ -38,9 +46,7 @@ public class DemoApplication {
         return "User data deleted";
     }
 
-    @Bean
-    public ExitCodeGenerator exitCodeGenerator() {
-        // Add your implementation here
+}
         return () -> 42;
     }
 
