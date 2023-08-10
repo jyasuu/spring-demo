@@ -8,8 +8,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.stereotype.Component;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 @Component
+@Repository
+@Transactional
 public class MyBean {
 
     private final static Logger logger = LoggerFactory.getLogger(MyBean.class);
@@ -32,4 +36,3 @@ public class MyBean {
     }
 
 }
-
