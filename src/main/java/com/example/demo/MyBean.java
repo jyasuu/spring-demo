@@ -22,7 +22,7 @@ public class MyBean {
     public String name;
 
     @Autowired
-    public MyBean(ApplicationArguments args,MyProperties myProperties) {
+    public MyBean(ApplicationArguments args, MyProperties myProperties, UserDao userDao) {
         boolean debug = args.containsOption("debug");
         List<String> files = args.getNonOptionArgs();
         logger.info(name);
@@ -35,4 +35,7 @@ public class MyBean {
         // if run with "--debug logfile.txt" prints ["logfile.txt"]
     }
 
-}
+    public void interactWithUserDao() {
+        // Implementation for interacting with the user DAO layer
+        // Add your implementation here
+    }
