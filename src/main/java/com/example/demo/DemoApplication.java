@@ -13,29 +13,34 @@ public class DemoApplication {
     @GetMapping("/users")
     public String getUserData() {
         // Implementation for retrieving user data
+        // Add your implementation here
         return "User data retrieved";
     }
 
     @PostMapping("/users")
     public String createUserData() {
         // Implementation for creating new user data
+        // Add your implementation here
         return "User data created";
     }
 
     @PutMapping("/users")
     public String updateUserData() {
         // Implementation for updating existing user data
+        // Add your implementation here
         return "User data updated";
     }
 
     @DeleteMapping("/users")
     public String deleteUserData() {
         // Implementation for deleting user data
+        // Add your implementation here
         return "User data deleted";
     }
 
     @Bean
     public ExitCodeGenerator exitCodeGenerator() {
+        // Add your implementation here
         return () -> 42;
     }
 
