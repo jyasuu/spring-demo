@@ -26,7 +26,7 @@ public class MyProperties {
     }
     public Map<String, MyPojo> getMap() {
         return this.map;
-    }
+    private String databaseUrl;
     
     public String getDatabaseUrl() {
         return this.databaseUrl;
