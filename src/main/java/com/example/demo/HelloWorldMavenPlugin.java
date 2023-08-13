@@ -12,20 +12,35 @@ public class HelloWorldMavenPlugin extends AbstractMojo {
     }
 }
 
+import java.io.File;
+import java.io.IOException;
+import org.yaml.snakeyaml.Yaml;
+
 public class YamlDataExporter {
     public void readYamlConfigFile() {
         // TODO: Implement method to read the YAML config file
+        Yaml yaml = new Yaml();
+        try {
+            File configFile = new File("config.yaml");
+            Object data = yaml.load(configFile);
+            System.out.println(data);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
     
     public void retrieveDataFromDatabase() {
         // TODO: Implement method to retrieve data from the database
+        // Database retrieval logic goes here
     }
     
     public void formatDataInYaml() {
         // TODO: Implement method to format the data in YAML format
+        // Data formatting logic goes here
     }
     
     public void exportDataToFile() {
         // TODO: Implement method to export the data to a file
+        // Data export logic goes here
     }
 }
