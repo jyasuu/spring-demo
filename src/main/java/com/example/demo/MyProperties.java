@@ -18,12 +18,22 @@ public class MyProperties {
     private final Map<String, MyPojo> map = new LinkedHashMap<>();
     @Valid
     private final List<MyPojo> list = new ArrayList<>();
+    
+    private String databaseUrl;
 
     public List<MyPojo> getList() {
         return this.list;
     }
     public Map<String, MyPojo> getMap() {
         return this.map;
+    }
+    
+    public String getDatabaseUrl() {
+        return this.databaseUrl;
+    }
+    
+    public void setDatabaseUrl(String databaseUrl) {
+        this.databaseUrl = databaseUrl;
     }
 
 }
